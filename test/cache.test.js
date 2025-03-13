@@ -44,7 +44,7 @@ describe('Cache', () => {
     }
 
     const cache = new Cache(config)
-    const storage = await cache.loadCache()
+    const storage = await cache.loadCache({})
 
     expect(typeof storage.version).toBe('string')
     expect(typeof storage.platforms).toBe('object')
@@ -59,7 +59,7 @@ describe('Cache', () => {
     }
 
     const cache = new Cache(config)
-    const storage = await cache.loadCache()
+    const storage = await cache.loadCache({})
 
     console.log(storage.platforms.darwin)
   })
